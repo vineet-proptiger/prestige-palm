@@ -115,7 +115,7 @@ const CarouselSection = ({ setIsOpen }) => {
                   fill
                   priority={idx === 0 || idx === 1 || Math.abs(idx - index) <= 1} // Preload active and adjacent images for instant rendering
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 900px"
-                  className="object-cover select-none pointer-events-none transition-transform duration-[800ms] ease-out group-hover:scale-105"
+                  className="object-cover select-none pointer-events-none transition-transform duration-[800ms] ease-out group-hover:scale-110"
                 />
                 
                 {/* Image Overlay */}
