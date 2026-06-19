@@ -119,11 +119,11 @@ const Overview = ({ setIsOpen }) => (
 
         {/* ── Right Side: Image ── */}
         <div className="w-full lg:w-1/2" data-aos="fade-left">
-          <div className="relative w-full rounded-lg overflow-hidden shadow-lg" style={{ aspectRatio: '4/3' }}>
+          <div className="relative w-full rounded-lg overflow-hidden shadow-lg h-[350px] lg:h-[480px]">
             <Image 
               src={overviewImage} 
               alt="Prestige Palm Court Overview" 
-              fill 
+              fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
