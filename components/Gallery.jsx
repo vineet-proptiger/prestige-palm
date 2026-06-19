@@ -70,7 +70,7 @@ const Gallery = ({ setIsOpen }) => {
             <div 
               key={idx}
               className="relative w-full cursor-pointer group overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300" 
-              style={{ aspectRatio: '4/3', background: '#eee' }}
+              style={{ aspectRatio: '16/9', background: '#eee' }}
               onClick={() => openLightbox(img.src)}
             >
               <Image 
