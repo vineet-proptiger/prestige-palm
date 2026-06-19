@@ -2,28 +2,28 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
+import Navbar from '../../components/Navbar'
+import Hero from '../../components/Hero'
 
-const Overview = dynamic(() => import('../components/Overview'), { ssr: true })
-const Highlights = dynamic(() => import('../components/Highlights'), { ssr: true })
-const Amenities = dynamic(() => import('../components/Amenities'), { ssr: true })
-const Pricing = dynamic(() => import('../components/Pricing'), { ssr: true })
-const Location = dynamic(() => import('../components/Location'), { ssr: true })
-const MasterPlan = dynamic(() => import('../components/MasterPlan'), { ssr: true })
-// const PaymentPlan = dynamic(() => import('../components/PaymentPlan'), { ssr: true })
-const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { ssr: true })
-const QuickChat = dynamic(() => import('../components/QuickChat'), { ssr: true })
-const Footer = dynamic(() => import('../components/Footer'), { ssr: true })
+const Overview = dynamic(() => import('../../components/Overview'), { ssr: true })
+const Highlights = dynamic(() => import('../../components/Highlights'), { ssr: true })
+const Amenities = dynamic(() => import('../../components/Amenities'), { ssr: true })
+const Pricing = dynamic(() => import('../../components/Pricing'), { ssr: true })
+const Location = dynamic(() => import('../../components/Location'), { ssr: true })
+const MasterPlan = dynamic(() => import('../../components/MasterPlan'), { ssr: true })
+// const PaymentPlan = dynamic(() => import('../../components/PaymentPlan'), { ssr: true })
+const AboutDeveloper = dynamic(() => import('../../components/AboutDeveloper'), { ssr: true })
+const QuickChat = dynamic(() => import('../../components/QuickChat'), { ssr: true })
+const Footer = dynamic(() => import('../../components/Footer'), { ssr: true })
 
-const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
-// const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: false })
-const CarouselSection = dynamic(() => import('../components/CarouselSection'), { ssr: false })
-// const ExclusiveAmenities = dynamic(() => import('../components/ExclusiveAmenities'), { ssr: false })
-// const Sustainability = dynamic(() => import('../components/Sustainability'), { ssr: false })
-// const JapaneseExcellence = dynamic(() => import('../components/JapaneseExcellence'), { ssr: false })
-const EnquireModal = dynamic(() => import('../components/EnquireModal'), { ssr: false })
-const AosInit = dynamic(() => import('../components/AosInit'), { ssr: false })
+const Gallery = dynamic(() => import('../../components/Gallery'), { ssr: false })
+// const VirtualTour = dynamic(() => import('../../components/VirtualTour'), { ssr: false })
+const CarouselSection = dynamic(() => import('../../components/CarouselSection'), { ssr: false })
+// const ExclusiveAmenities = dynamic(() => import('../../components/ExclusiveAmenities'), { ssr: false })
+// const Sustainability = dynamic(() => import('../../components/Sustainability'), { ssr: false })
+// const JapaneseExcellence = dynamic(() => import('../../components/JapaneseExcellence'), { ssr: false })
+const EnquireModal = dynamic(() => import('../../components/EnquireModal'), { ssr: false })
+const AosInit = dynamic(() => import('../../components/AosInit'), { ssr: false })
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)

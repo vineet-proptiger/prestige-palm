@@ -4,11 +4,12 @@ const nextConfig = {
     if (dev) config.cache = false
     return config
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
-        source: '/the-terraces',
-        destination: '/',
+        source: '/',
+        destination: '/palm-court-new-launch',
+        permanent: false,
       },
     ]
   },
