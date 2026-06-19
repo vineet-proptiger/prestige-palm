@@ -25,7 +25,7 @@ const CurvedCorners = ({ bg = '#fff' }) => {
 }
 
 const infoItems = [
-  { label: 'LOCATION',   value: <>MADHAVARAM,<br/> NORTH CHENNAI</> },
+  { label: 'LOCATION',   value: <>MADHAVARAM,<br/>CHENNAI</> },
   { label: 'TYPE',       value: '2, 3 & 4 BHK'  },
   { label: 'DEVELOPMENT', value: 'PREMIUM RESIDENTIAL' },
 ]
