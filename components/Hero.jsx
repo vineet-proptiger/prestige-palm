@@ -142,16 +142,21 @@ const Hero = ({ setIsOpen }) => {
           white-space: nowrap;
         }
 
+        .hero-slider-wrapper {
+          width: 100%;
+          height: 100%;
+        }
         .slide-layer {
           position: relative;
           width: 100%;
+          height: 100%;
           opacity: 0;
-          display: none;
-          transition: opacity 1s ease-in-out;
+          transition: opacity 1.2s ease-in-out;
+          pointer-events: none;
         }
         .slide-layer.active {
           opacity: 1;
-          display: block;
+          pointer-events: auto;
         }
 
         .hero-image {
@@ -264,19 +269,26 @@ const Hero = ({ setIsOpen }) => {
         }
       `}} />
 
-      {slides.map((slide, index) => (
-        <div key={index} className={`slide-layer ${index === currentSlide ? 'active' : ''}`}>
-          <Image
-            src={slide.img}
-            alt={`Banner ${index + 1}`}
-            width={1920}
-            height={800}
-            className="hero-image"
-            priority={index === 0}
-            sizes="100vw"
-          />
-        </div>
-      ))}
+      {/* ── Slide Wrapper (Grid to stack slides for smooth crossfade) ── */}
+      <div className="hero-slider-wrapper" style={{ display: 'grid' }}>
+        {slides.map((slide, index) => (
+          <div 
+            key={index} 
+            className={`slide-layer ${index === currentSlide ? 'active' : ''}`}
+            style={{ gridArea: '1 / 1 / 2 / 2' }}
+          >
+            <Image
+              src={slide.img}
+              alt={`Banner ${index + 1}`}
+              width={1920}
+              height={800}
+              className="hero-image"
+              priority={index === 0}
+              sizes="100vw"
+            />
+          </div>
+        ))}
+      </div>
 
       {/* ── Dark overlay for text legibility ── */}
       <div className="hero-overlay" />
