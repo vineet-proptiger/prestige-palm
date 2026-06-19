@@ -26,7 +26,7 @@ const CurvedCorners = ({ bg = '#fff' }) => {
 
 const infoItems = [
   { label: 'LOCATION',   value: <>MADHAVARAM,<br/>CHENNAI</> },
-  { label: 'TYPE',       value: '2, 3 & 4 BHK'  },
+  { label: 'TYPE',       value: '2 & 3 BHK'  },
   { label: 'DEVELOPMENT', value: 'PREMIUM RESIDENTIAL' },
 ]
 
@@ -49,7 +49,7 @@ const Overview = ({ setIsOpen }) => (
         </h2>
         {/* <h3 style={{
           fontFamily: F_JOST, fontWeight: '600', fontSize: '16px',
-          color: '#A9262D', letterSpacing: '0.05em',
+          color: '#C9A96E', letterSpacing: '0.05em',
           textTransform: 'capitalize', margin: 0,
         }}>
           Premium Residences at Madhavaram
@@ -68,7 +68,8 @@ const Overview = ({ setIsOpen }) => (
             marginTop: 0, marginBottom: '20px',
             textAlign: 'justify',
           }}>
-            Prestige Palm Court is an upcoming premium residential development by the Prestige Group, gracefully positioned along the Grand Northern Trunk Road in Madhavaram, North Chennai. Spanning a vast, thoughtfully planned landscape, the project brings together elegant architecture, vastu-compliant residences, and expansive open spaces to create a refined urban retreat. Offering spacious 2, 3, and 4 BHK apartments, each home is designed to invite natural light, comfort, and a sense of quiet sophistication into everyday living.
+           Prestige Palm Court
+ Madhavaram, Chennai, where luxury meets elegance at Prestige Palm Court! If you are looking for your dream home in one of the most sought-after locations, then look no further. Prestige Palm Court is an upcoming residential project that offers a perfect blend of comfort, style, and convenience. With its impeccable design, world-class amenities, and prime location advantage, this project is set to redefine luxury living in Madhavaram, Chennai. So get ready to indulge in a life of opulence and create everlasting memories with your loved ones at Prestige Palm Court.
           </p>
           <p style={{
             fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
@@ -76,7 +77,7 @@ const Overview = ({ setIsOpen }) => (
             marginTop: 0, marginBottom: '32px',
             textAlign: 'justify',
           }}>
-            Set within one of North Chennai's fastest-growing corridors, Prestige Palm Court enjoys excellent connectivity to the Madhavaram Metro Line, major road networks, and the city's central business and transit hubs. The neighbourhood is surrounded by well-established social infrastructure, ensuring every convenience is at your doorstep.
+            Prestige Palm Court, a prestigious residential project located in the heart of Madhavaram, Chennai. This grand development by Prestige Group offers a luxurious living experience like no other. Spread across acres of lush greenery, this project boasts an exquisite collection of meticulously designed homes that cater to your every need.
           </p>
 
           {/* Info Box */}
@@ -118,14 +119,15 @@ const Overview = ({ setIsOpen }) => (
         </div>
 
         {/* ── Right Side: Image ── */}
-        <div className="w-full lg:w-1/2" data-aos="fade-left">
-          <div className="relative w-full rounded-lg overflow-hidden shadow-lg h-[350px] lg:h-[480px]">
+        <div className="hidden lg:block lg:w-1/2" data-aos="fade-left">
+          <div className="relative w-full flex justify-center items-center">
             <Image 
               src={overviewImage} 
               alt="Prestige Palm Court Overview" 
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              width={1000}
+              height={1200}
+              className="rounded-lg shadow-lg"
+              style={{ width: '75%', height: 'auto', objectFit: 'contain', margin: '0 auto' }}
             />
           </div>
         </div>

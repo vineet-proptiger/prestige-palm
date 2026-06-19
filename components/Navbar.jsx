@@ -25,7 +25,7 @@ const Navbar = ({ setIsOpen }) => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const hover   = e => (e.currentTarget.style.color = '#A9262D')
+  const hover   = e => (e.currentTarget.style.color = '#C9A96E')
   const unhover = e => (e.currentTarget.style.color = NAV_TEXT)
 
   return (
@@ -59,9 +59,9 @@ const Navbar = ({ setIsOpen }) => {
         {/* CENTER LOGO */}
         <a href="#" style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
           <style>{`
-            .nav-logo { height: 52px; width: auto; display: block; }
+            .nav-logo { height: 60px; width: auto; display: block; object-fit: contain; transform: scale(1.4, 1.25); transform-origin: center; }
             @media(max-width: 768px) {
-              .nav-logo { height: 40px; }
+              .nav-logo { height: 52px; transform: scale(1.3, 1.2); }
             }
           `}</style>
           <img
@@ -82,37 +82,17 @@ const Navbar = ({ setIsOpen }) => {
 
         {/* DESKTOP PHONE BUTTON — Far Right */}
         <div className="hidden lg:flex" style={{ position: 'absolute', right: '32px' }}>
-          <a href="tel:9718344024" style={{
+          <a href="tel:9718344024" className="btn-brand" style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'var(--color-brand)',
-            color: '#fff',
             padding: '9px 22px',
             borderRadius: '50px',
             fontFamily: F_JOST,
             fontSize: '14px',
-            fontWeight: '700',
             letterSpacing: '0.04em',
-            transition: 'all 0.3s ease',
-            boxShadow: '0 4px 12px rgba(169, 38, 45, 0.2)',
-            border: '2px solid transparent',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#ffffff';
-            e.currentTarget.style.color = 'var(--color-brand)';
-            e.currentTarget.style.borderColor = 'var(--color-brand)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 6px 16px rgba(169, 38, 45, 0.25)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'var(--color-brand)';
-            e.currentTarget.style.color = '#fff';
-            e.currentTarget.style.borderColor = 'transparent';
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(169, 38, 45, 0.2)';
-          }}
-          >
+            boxShadow: '0 4px 12px rgba(201, 169, 110, 0.2)',
+          }}>
             <Phone size={15} fill="currentColor" />
             9718344024
           </a>
@@ -154,35 +134,19 @@ const Navbar = ({ setIsOpen }) => {
           ))}
           {/* Mobile drawer call CTA */}
           <div style={{ padding: '16px 24px', borderBottom: '1px solid #f5f5f5', display: 'flex', justifyContent: 'center' }}>
-            <a href="tel:9718344024" style={{
+            <a href="tel:9718344024" className="btn-brand" style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
-              background: 'var(--color-brand)',
-              color: '#fff',
               padding: '8px 20px',
               borderRadius: '50px',
               fontFamily: F_JOST,
               fontSize: '13px',
-              fontWeight: '700',
               letterSpacing: '0.04em',
               textDecoration: 'none',
-              transition: 'all 0.3s ease',
-              border: '2px solid transparent',
-              boxShadow: '0 4px 12px rgba(169, 38, 45, 0.15)',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#ffffff';
-              e.currentTarget.style.color = 'var(--color-brand)';
-              e.currentTarget.style.borderColor = 'var(--color-brand)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'var(--color-brand)';
-              e.currentTarget.style.color = '#fff';
-              e.currentTarget.style.borderColor = 'transparent';
-            }}
-            >
+              boxShadow: '0 4px 12px rgba(201, 169, 110, 0.15)',
+            }}>
               <Phone size={15} fill="currentColor" />
               9718344024
             </a>

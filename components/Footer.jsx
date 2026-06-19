@@ -21,7 +21,7 @@ const Footer = () => (
       </div>
       <p style={{ fontSize: '15px', color: '#bbb', fontFamily: F_SANS, lineHeight: 1.8, marginBottom: '24px', textAlign: 'justify' }}
         data-aos="fade-in" data-aos-delay="100">
-        Prestige Palm Court is South North Chennai&apos;s premier luxury high-rise residential development in Madhavaram, offering premium 2, 3 &amp; 4 BHK residences starting from ₹80 Lacs*. Thoughtfully curated amenities, iconic skyline views, advanced security, and smart home features — Prestige Palm Court is designed for those who demand the extraordinary.
+        Prestige Palm Court is South North Chennai&apos;s premier luxury high-rise residential development in Madhavaram, offering premium 2 &amp; 3 BHK residences starting from ₹80 Lacs*. Thoughtfully curated amenities, iconic skyline views, advanced security, and smart home features — Prestige Palm Court is designed for those who demand the extraordinary.
       </p>
       
       {/* RERA Block */}

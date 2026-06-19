@@ -8,16 +8,16 @@
    THEME VARIABLES — Lodha (Golden Amber & Charcoal Theme)
    ═══════════════════════════════════════════════════════════════ */
 :root {
-  /* ── Brand Red / Beige Theme ── */
-  --color-gold: #A9262D;        /* Now mapped to Brand Red */
-  --color-gold-light: #C53B42;
-  --color-gold-dark: #8B1E24;
-  --color-gold-bg: #F4F0E6;     /* Warm beige background */
+  /* ── Brand Gold Theme ── */
+  --color-gold: #C9A96E;        
+  --color-gold-light: #d8be8d;
+  --color-gold-dark: #b89552;
+  --color-gold-bg: rgba(201, 169, 110, 0.1);     
 
-  /* ── Brand Red (Krisumi) ── */
-  --color-brand: #A9262D;
-  --color-brand-hover: #8B1E24;
-  --color-brand-light: rgba(169, 38, 45, 0.08);
+  /* ── Brand Primary ── */
+  --color-brand: #C9A96E;
+  --color-brand-hover: #b89552;
+  --color-brand-light: rgba(201, 169, 110, 0.08);
 
   /* ── Brown Text (nav links, headings) ── */
   --color-nav-text: #684C1B;
@@ -50,11 +50,11 @@
   --btn-radius-pill: 50px;
 
   /* ── Shadows ── */
-  --shadow-sm: 0 2px 8px rgba(169, 38, 45, 0.08);
-  --shadow-md: 0 8px 24px rgba(169, 38, 45, 0.14);
-  --shadow-lg: 0 20px 48px rgba(169, 38, 45, 0.18);
+  --shadow-sm: 0 2px 8px rgba(201, 169, 110, 0.08);
+  --shadow-md: 0 8px 24px rgba(201, 169, 110, 0.14);
+  --shadow-lg: 0 20px 48px rgba(201, 169, 110, 0.18);
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.07);
-  --color-shadow-inner: rgba(169, 38, 45, 0.10);
+  --color-shadow-inner: rgba(201, 169, 110, 0.10);
 }
 
 /* ─── Keyframes ─────────────────────────────────────────────── */
@@ -101,11 +101,11 @@
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(181, 135, 40, 0.5);
+    box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.5);
   }
 
   50% {
-    box-shadow: 0 0 0 10px rgba(181, 135, 40, 0);
+    box-shadow: 0 0 0 10px rgba(201, 169, 110, 0);
   }
 }
 
@@ -135,11 +135,11 @@
 
   0%,
   100% {
-    border-color: rgba(181, 135, 40, 0.4);
+    border-color: rgba(201, 169, 110, 0.4);
   }
 
   50% {
-    border-color: rgba(181, 135, 40, 1);
+    border-color: rgba(201, 169, 110, 1);
   }
 }
 
@@ -234,7 +234,7 @@
 
   /* ── Theme selection ── */
   ::selection {
-    background: rgba(169, 38, 45, 0.15);
+    background: rgba(201, 169, 110, 0.15);
     color: var(--color-gold-dark);
   }
 }
@@ -261,7 +261,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 14px rgba(181, 135, 40, 0.35);
+    box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -288,12 +288,12 @@
     color: var(--color-gold) !important;
     border-color: var(--color-gold);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(181, 135, 40, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   .btn-gold:active {
     transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(181, 135, 40, 0.20);
+    box-shadow: 0 4px 10px rgba(201, 169, 110, 0.20);
   }
 
   /* ══ OUTLINED RED BUTTON ══ */
@@ -323,7 +323,7 @@
     background: var(--color-gold) !important;
     color: #ffffff !important;
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(181, 135, 40, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   /* ══ DARK PRIMARY BUTTON (Now Gold Theme) ══ */
@@ -345,7 +345,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 14px rgba(181, 135, 40, 0.35);
+    box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -355,12 +355,12 @@
     color: var(--color-gold) !important;
     border-color: var(--color-gold);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(181, 135, 40, 0.30);
+    box-shadow: 0 12px 28px rgba(201, 169, 110, 0.30);
   }
 
   .btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(181, 135, 40, 0.20);
+    box-shadow: 0 4px 10px rgba(201, 169, 110, 0.20);
   }
 
   /* ══ BRAND RED BUTTON (Krisumi style) ══ */
@@ -405,7 +405,7 @@
     letter-spacing: 0.12em;
     font-weight: 700;
     box-shadow: none !important;
-    filter: drop-shadow(-4px 0 14px rgba(169, 38, 45, 0.28));
+    filter: drop-shadow(-4px 0 14px rgba(201, 169, 110, 0.28));
     border: 2px solid var(--color-brand) !important;
     transition: all 0.3s ease !important;
   }
@@ -414,7 +414,21 @@
     transform: translateY(-50%) rotate(0deg) !important;
     background: #ffffff !important;
     color: var(--color-brand) !important;
-    filter: drop-shadow(-6px 0 20px rgba(169, 38, 45, 0.35));
+    filter: drop-shadow(-6px 0 20px rgba(201, 169, 110, 0.35));
+  }
+
+  /* ══ GLOBAL BUTTON OVERRIDE (Gold Gradient) ══ */
+  .btn-gold, .btn-gold-outline, .btn-primary, .btn-brand {
+    background: linear-gradient(90deg, #D4AF37 0%, #F9E08A 100%) !important;
+    color: #111827 !important;
+    border-color: transparent !important;
+    font-weight: 800 !important;
+  }
+
+  .btn-gold:hover, .btn-gold-outline:hover, .btn-primary:hover, .btn-brand:hover {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #D4AF37 !important;
   }
 
   /* ══ SECTION TITLE ══ */
@@ -453,7 +467,7 @@
 
   .form-input:focus {
     border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(181, 135, 40, 0.10), inset 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.10), inset 0 1px 3px rgba(0, 0, 0, 0.04);
   }
 
   .form-input::placeholder {
@@ -508,7 +522,7 @@
   .pricing-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(181, 135, 40, 0.25);
+    border-color: rgba(201, 169, 110, 0.25);
   }
 
   .pricing-card:hover::after {
@@ -531,7 +545,7 @@
 
   .highlight-card:hover {
     border-color: var(--color-gold);
-    box-shadow: 0 8px 28px rgba(181, 135, 40, 0.15);
+    box-shadow: 0 8px 28px rgba(201, 169, 110, 0.15);
     transform: translateY(-4px);
   }
 
@@ -553,7 +567,7 @@
     border-color: var(--color-gold);
     background: var(--color-gold-bg);
     color: var(--color-gold);
-    box-shadow: 0 0 0 6px rgba(181, 135, 40, 0.08);
+    box-shadow: 0 0 0 6px rgba(201, 169, 110, 0.08);
   }
 
   /* ══ SECTION WRAPPER — white card on diamond bg ══ */
@@ -586,15 +600,15 @@
   /* Convert box-shadow to filter drop-shadow because mask clips box-shadow */
   .btn-gold, .btn-primary {
     box-shadow: none !important;
-    filter: drop-shadow(0 4px 10px rgba(181, 135, 40, 0.35));
+    filter: drop-shadow(0 4px 10px rgba(201, 169, 110, 0.35));
   }
   .btn-gold:hover, .btn-primary:hover, .btn-gold-outline:hover {
     box-shadow: none !important;
-    filter: drop-shadow(0 8px 20px rgba(181, 135, 40, 0.30));
+    filter: drop-shadow(0 8px 20px rgba(201, 169, 110, 0.30));
   }
   .btn-gold:active, .btn-primary:active {
     box-shadow: none !important;
-    filter: drop-shadow(0 2px 6px rgba(181, 135, 40, 0.20));
+    filter: drop-shadow(0 2px 6px rgba(201, 169, 110, 0.20));
   }
 }
 
@@ -619,7 +633,7 @@
   right: 0;
   z-index: 999;
   display: flex;
-  box-shadow: 0 -4px 20px rgba(181, 135, 40, 0.18);
+  box-shadow: 0 -4px 20px rgba(201, 169, 110, 0.18);
 }
 
 @media (min-width: 1024px) {
@@ -633,12 +647,12 @@ nav.fixed {
   background: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(181, 135, 40, 0.08);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
 }
 
 /* ─── Teal-Cyan focus ring globally ─────────────────────────────────── */
 *:focus-visible {
-  outline: 2px solid rgba(181, 135, 40, 0.5);
+  outline: 2px solid rgba(201, 169, 110, 0.5);
   outline-offset: 3px;
   border-radius: 4px;
 }

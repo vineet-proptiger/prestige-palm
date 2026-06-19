@@ -33,8 +33,8 @@ const nephilm = localFont({
 })
 
 export const metadata = {
-  title: 'Prestige Palm Court | Premium 2, 3 & 4 BHK Homes in Madhavaram, North Chennai',
-  description: "Prestige Palm Court — South North Chennai's premier luxury high-rise in Madhavaram. Premium 2, 3 & 4 BHK residences starting from ₹80 Lacs. Designed for those who demand the extraordinary. MAHARERA: PM1170002600357.",
+  title: 'Prestige Palm Court | Premium 2 & 3 BHK Homes in Madhavaram, North Chennai',
+  description: "Prestige Palm Court — South North Chennai's premier luxury high-rise in Madhavaram. Premium 2 & 3 BHK residences starting from ₹80 Lacs. Designed for those who demand the extraordinary. MAHARERA: PM1170002600357.",
 }
 
 export default function RootLayout({ children }) {
@@ -53,8 +53,8 @@ export default function RootLayout({ children }) {
                 "@type": "WebPage",
                 "@id": "https://prestigepalmcourtmahalaxmi.in/"
               },
-              "headline": "Prestige Palm Court | Premium 2, 3 & 4 BHK Homes in Madhavaram, North Chennai",
-              "description": "Prestige Palm Court, South North Chennai's premier luxury high-rise in Madhavaram. Premium 2, 3 & 4 BHK residences starting from ₹80 Lacs. MAHARERA: PM1170002600357.",
+              "headline": "Prestige Palm Court | Premium 2 & 3 BHK Homes in Madhavaram, North Chennai",
+              "description": "Prestige Palm Court, South North Chennai's premier luxury high-rise in Madhavaram. Premium 2 & 3 BHK residences starting from ₹80 Lacs. MAHARERA: PM1170002600357.",
               "image": "https://prestigepalmcourtmahalaxmi.in/_next/image?url=%2Fimages%2Fhero%2Fbanner1.webp&w=1200&q=75",
               "author": {
                 "@type": "Organization",

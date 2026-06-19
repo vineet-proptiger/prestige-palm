@@ -119,7 +119,7 @@ const IconWaves = () => (
 const highlights = [
   { title: 'Premium Development', desc: 'Expansive 8 acre premium residential development.', Icon: IconBuilding },
   { title: 'Vastu-Compliant Homes', desc: 'Thoughtfully planned 900 plus vastu-compliant homes.', Icon: IconSunCloud },
-  { title: 'Spacious Residences', desc: 'Spacious 2, 3 and 4 BHK residences.', Icon: IconHome },
+  { title: 'Spacious Residences', desc: 'Spacious 2 and 3 BHK residences.', Icon: IconHome },
   { title: 'Well-Planned Layouts', desc: 'Well-planned layouts from 650 to 1850 sq. ft.', Icon: IconSmart },
   { title: 'Low-Density Living', desc: 'Low-density living with refined community design.', Icon: IconTrees },
   { title: 'Gated Community', desc: 'Gated community with premium lifestyle amenities.', Icon: IconWaves },

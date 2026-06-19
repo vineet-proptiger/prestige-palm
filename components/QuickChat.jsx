@@ -64,7 +64,6 @@ export default function QuickChat() {
               {[
                 {text: "💰 Current price band", link: "https://wa.me/919718344024?text=Hi%2C%20I%20want%20the%20current%20price%20band%20for%20Prestige%20Palm%20Court%20Madhavaram."},
                 {text: "🏛️ 2 & 3 BHK floor plan", link: "https://wa.me/919718344024?text=Hi%2C%20please%20send%20me%20the%202%20and%203%20BHK%20floor%20plan%20for%20Prestige%20Palm%20Court."},
-                {text: "🏛️ 4 BHK floor plan", link: "https://wa.me/919718344024?text=Hi%2C%20please%20send%20me%20the%204%20BHK%20floor%20plan%20for%20Prestige%20Palm%20Court."},
                 {text: "🚗 Book a site visit", link: "https://wa.me/919718344024?text=Hi%2C%20I%20want%20to%20book%20a%20site%20visit%20for%20Prestige%20Palm%20Court%2C%20Madhavaram%20North Chennai.%20My%20preferred%20day%20is%3A"},
                 {text: "🌍 NRI investment guide", link: "https://wa.me/919718344024?text=Hi%2C%20I%20am%20an%20NRI%20buyer%20%E2%80%94%20please%20share%20the%20Prestige%20Palm%20Court%20NRI%20investment%20guide."},
                 {text: "📐 Payment plan", link: "https://wa.me/919718344024?text=Hi%2C%20please%20share%20the%20Prestige%20Palm%20Court%20payment%20plan%20and%20instalment%20schedule."},
