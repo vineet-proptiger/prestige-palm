@@ -242,8 +242,9 @@ const Hero = ({ setIsOpen }) => {
           }
 
           .hero-content {
-            position: static !important;
-            background: #FFF9E6;
+            position: relative !important;
+            background: #FFF9E6 url('/images/hero/leaf-bg.png') no-repeat center center !important;
+            background-size: contain !important;
             padding: 24px 20px 28px !important;
           }
 

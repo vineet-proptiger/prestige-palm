@@ -68,8 +68,7 @@ const Overview = ({ setIsOpen }) => (
             marginTop: 0, marginBottom: '20px',
             textAlign: 'justify',
           }}>
-           Prestige Palm Court
- Madhavaram, Chennai, where luxury meets elegance at Prestige Palm Court! If you are looking for your dream home in one of the most sought-after locations, then look no further. Prestige Palm Court is an upcoming residential project that offers a perfect blend of comfort, style, and convenience. With its impeccable design, world-class amenities, and prime location advantage, this project is set to redefine luxury living in Madhavaram, Chennai. So get ready to indulge in a life of opulence and create everlasting memories with your loved ones at Prestige Palm Court.
+           Prestige Palm Court Madhavaram, Chennai, where luxury meets elegance at Prestige Palm Court! If you are looking for your dream home in one of the most sought-after locations, then look no further. Prestige Palm Court is an upcoming residential project that offers a perfect blend of comfort, style, and convenience. With its impeccable design, world-class amenities, and prime location advantage, this project is set to redefine luxury living in Madhavaram, Chennai. So get ready to indulge in a life of opulence and create everlasting memories with your loved ones at Prestige Palm Court.
           </p>
           <p style={{
             fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
