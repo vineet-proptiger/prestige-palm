@@ -94,7 +94,7 @@ const CarouselSection = ({ setIsOpen }) => {
         </div>
 
         {/* ── Main Sliding Track Gallery (Premium & Zero-Flash) ── */}
-        <div className="relative w-full aspect-[16/8] min-h-[350px] md:min-h-[450px] lg:min-h-[550px] bg-gray-100 overflow-hidden rounded-lg shadow-md">
+        <div className="relative w-full aspect-[21/9] min-h-[300px] md:min-h-[350px] lg:min-h-[450px] bg-gray-100 overflow-hidden rounded-lg shadow-md">
           <div 
             className="flex h-full w-full transition-transform duration-700 cubic-bezier(0.25, 0.46, 0.45, 0.94)"
             style={{ 
