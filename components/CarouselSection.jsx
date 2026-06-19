@@ -89,11 +89,15 @@ const CarouselSection = ({ setIsOpen }) => {
         </div>
 
         {/* ── Main Sliding Track Gallery (Premium & Zero-Flash) ── */}
-        <div className="relative w-full overflow-hidden rounded-lg">
+        <div className="relative w-full overflow-hidden rounded-lg carousel-container">
+          <style dangerouslySetInnerHTML={{ __html: `
+            .carousel-container { --slide-w: 100%; }
+            @media (min-width: 768px) { .carousel-container { --slide-w: 65%; } }
+          `}} />
           <div 
             className="flex w-full transition-transform duration-700 ease-in-out"
             style={{ 
-              transform: `translateX(calc(-${index} * (65% + 16px)))`,
+              transform: `translateX(calc(-${index} * (var(--slide-w) + 16px)))`,
               willChange: 'transform',
               gap: '16px'
             }}
@@ -102,7 +106,7 @@ const CarouselSection = ({ setIsOpen }) => {
               <div 
                 key={idx} 
                 className="relative flex-shrink-0 group overflow-hidden bg-gray-200 cursor-pointer"
-                style={{ width: '65%', aspectRatio: '16/9' }}
+                style={{ width: 'var(--slide-w)', aspectRatio: '16/9' }}
                 onClick={() => setSelectedImgIndex(idx)}
               >
                 <Image
@@ -115,10 +119,10 @@ const CarouselSection = ({ setIsOpen }) => {
                 />
                 
                 {/* Image Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 pb-10 flex flex-col justify-end"
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-8 lg:p-10 pb-5 md:pb-10 flex flex-col justify-end"
                      style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)', minHeight: '40%' }}>
-                    <h3 className="text-white text-lg md:text-2xl font-bold mb-1 tracking-wide" style={{ fontFamily: F_JOST }}>{img.title}</h3>
-                    <p className="text-white/90 text-sm md:text-base leading-relaxed max-w-2xl font-sans">{img.desc}</p>
+                    <h3 className="text-white text-base md:text-2xl font-bold mb-1 tracking-wide" style={{ fontFamily: F_JOST }}>{img.title}</h3>
+                    <p className="text-white/90 text-[11px] md:text-base leading-snug md:leading-relaxed max-w-2xl font-sans">{img.desc}</p>
                     
                     {/* Progress Bar Container */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 md:h-1.5 bg-white/20">
