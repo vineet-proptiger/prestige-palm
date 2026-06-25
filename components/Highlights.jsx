@@ -135,7 +135,7 @@ const Highlights = ({ setIsOpen }) => (
       <div style={{ textAlign: 'center', marginBottom: '40px' }} data-aos="fade-up">
         <h2 style={{
           fontFamily: F_JOST, fontWeight: '700', fontSize: '17px',
-          color: '#684C1B', letterSpacing: '0.22em',
+          color: '#684C1B', letterSpacing: '0.1em',
           textTransform: 'uppercase', margin: 0,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
