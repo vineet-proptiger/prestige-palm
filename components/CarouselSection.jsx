@@ -7,8 +7,24 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
 
 const CarouselSection = ({ setIsOpen }) => {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(1)
+  const [isTransitioning, setIsTransitioning] = useState(true)
   const [selectedImgIndex, setSelectedImgIndex] = useState(null)
+  const [userInteracted, setUserInteracted] = useState(0)
+
+  const numItems = galleryImages.length;
+  const extendedImages = [
+    galleryImages[numItems - 1],
+    ...galleryImages,
+    galleryImages[0],
+    galleryImages[1]
+  ].filter(Boolean);
+
+  const getRealIndex = (idx) => {
+    if (idx === 0) return numItems - 1;
+    if (idx >= numItems + 1) return (idx - 1) % numItems;
+    return idx - 1;
+  };
 
   // Keyboard navigation for Lightbox
   useEffect(() => {
@@ -33,17 +49,52 @@ const CarouselSection = ({ setIsOpen }) => {
   }
 
   const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % galleryImages.length)
+    if (!isTransitioning) return;
+    setIndex((prev) => prev + 1);
+    setUserInteracted(Date.now());
   }
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+    if (!isTransitioning) return;
+    setIndex((prev) => prev - 1);
+    setUserInteracted(Date.now());
   }
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 4000) // Autoplay every 4s
-    return () => clearInterval(timer)
-  }, [index])
+    const timer = setInterval(() => {
+      setIndex((prev) => prev + 1);
+    }, 4000); // Autoplay every 4s
+    return () => clearInterval(timer);
+  }, [userInteracted]);
+
+  // Handle the seamless jump
+  useEffect(() => {
+    let timeout;
+    if (index === 0) {
+      timeout = setTimeout(() => {
+        setIsTransitioning(false);
+        setIndex(numItems);
+      }, 700);
+    } else if (index === numItems + 1) {
+      timeout = setTimeout(() => {
+        setIsTransitioning(false);
+        setIndex(1);
+      }, 700);
+    }
+    return () => clearTimeout(timeout);
+  }, [index, numItems]);
+
+  // Re-enable transition after jump
+  useEffect(() => {
+    if (!isTransitioning) {
+      const raf = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsTransitioning(true);
+        });
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [isTransitioning]);
 
   return (
     <section id="homes-designed" style={{
@@ -95,19 +146,19 @@ const CarouselSection = ({ setIsOpen }) => {
             @media (min-width: 768px) { .carousel-container { --slide-w: 65%; } }
           `}} />
           <div 
-            className="flex w-full transition-transform duration-700 ease-in-out"
+            className={`flex w-full ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
             style={{ 
               transform: `translateX(calc(-${index} * (var(--slide-w) + 16px)))`,
               willChange: 'transform',
               gap: '16px'
             }}
           >
-            {galleryImages.map((img, idx) => (
+            {extendedImages.map((img, idx) => (
               <div 
                 key={idx} 
                 className="relative flex-shrink-0 group overflow-hidden bg-gray-200 cursor-pointer"
                 style={{ width: 'var(--slide-w)', aspectRatio: '16/9' }}
-                onClick={() => setSelectedImgIndex(idx)}
+                onClick={() => setSelectedImgIndex(getRealIndex(idx))}
               >
                 <Image
                   src={img.src}
@@ -126,7 +177,7 @@ const CarouselSection = ({ setIsOpen }) => {
                     
                     {/* Progress Bar Container */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 md:h-1.5 bg-white/20">
-                      {idx === index && (
+                      {getRealIndex(idx) === getRealIndex(index) && (
                         <div 
                           className="h-full bg-white" 
                           style={{
